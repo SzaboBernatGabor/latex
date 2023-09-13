@@ -1,0 +1,58 @@
+\documentclass[twoside]{book}
+\usepackage[english, magyar]{babel}
+\usepackage{t1enc}
+\usepackage[]{lipsum}
+\usepackage[]{hulipsum}
+\usepackage[]{blindtext}
+\usepackage[]{geometry}
+\setcounter{tocdepth}{3}
+\geometry{inner=3cm,outer=5cm,top=5cm,bottom=5cm}
+\begin{document}
+\title{A Nagy Feladat}
+\author{szabo bernat gabor}
+\maketitle
+%\begin{abstract}
+\hulipsum
+%\end{abstract}
+\footnote{labjegyzet}
+\pagenumbering{Roman}
+\tableofcontents
+\pagebreak
+\frenchspacing
+\noindent
+\bigskip
+\foreignlanguage{latin}{\lipsum[2]}
+
+
+\begin{flushright}
+\newpage
+\today
+
+\pagenumbering{arabic}
+\section{rövid és hosszú} \footnote{labjegyzet a sectionben}
+\subsection{elso sub}
+\hulipsum[3]
+\subsection{masodik sub}
+\hulipsum[3]
+\section{masik cim}
+\subsection{harmadik sub}
+\subsubsection{subsub}
+\paragraph{parag}
+\subparagraph{subpara}
+\end{flushright}
+
+\newpage
+\selectlanguage{english}
+\linespread{2}
+{
+\today
+\blindtext[2]
+
+}
+
+\end{document}
+\appendix
+\section{fuggelekben egy}
+\subsection{egyik sub}
+\section{fuggelekben ketto}
+\subsection{masik sub}
