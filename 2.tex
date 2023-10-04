@@ -1,0 +1,77 @@
+\documentclass[twoside,12pt]{article}
+\usepackage{hulipsum}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[colorlinks,linkcolor=blue,%
+urlcolor=green,citecolor=red]{hyperref}
+\usepackage{varioref}
+\usepackage{cleveref}
+\geometry{inner=3cm,outer=5cm,top=3cm,bottom=3cm}
+\geometry{bindingoffset=1cm}
+\setlength{\marginparwidth}{3cm}
+\setlength{\marginparsep}{0.5cm}
+\pagestyle{fancy}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{University of Miskolc}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}
+\fancyhf{}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\autoref{s:fuggelek}
+
+
+\autopageref{s:fuggelek}
+\setcounter{tocdepth}{5}
+\title{Kettes Feladatsor}
+\maketitle
+\pagenumbering{roman}
+\begin{abstract}
+\ref{subsec:zagyva}
+\hulipsum[2]
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\footnote{Lábjegyzet}
+\end{abstract}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\section[rovid]{hosszu} \label{sec:elsoszakasz}
+\ref{s:fuggelek}
+\pageref{s:fuggelek}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\footnote{Section Lábjegyzet}
+\hulipsum[1]
+\label{s:section}
+\hulipsum[2]
+\subsection{szub} \label{subsec:alszakasz}
+\hulipsum
+\subsection{szubketto}
+\hulipsum
+\setcounter{secnumdepth}{5}
+\section{csakhosszu} \label{sec:masodikszakasz}
+\subsection{szub}
+\subsubsection{szubszub}
+\paragraph{paragrafus}
+\subparagraph{szubparagrafus}
+\label{s:subpara}
+\appendix
+\label{s:fuggelek}
+\section{Section1}
+\subsection{szub1}
+\quote
+\hulipsum[2]
+\subsection{szub2}
+\quotation
+\hulipsum[2]
+\section{Section2}
+\subsection{szub3}\label{subsec:zagyva}
+\begin{verse}
+\hulipsum[2]
+\end{verse}
+\subsection{szub4}
+\href{https://www.uni-miskolc.hu/~viktoria.vadon/TEX/2het/2_dokszerk_folyt.pdf}{help}
+\end{document}
