@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{babel}
+\usepackage{hulipsum}
+\usepackage{sidecap}
+\usepackage{listings}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\newfloat{forraskod}{hbt}{verbatim}
+\newtheorem*{megj}{Megjegyzés}
+\theoremstyle{plain}
+\newtheorem{tet}{Tétel}
+\newtheorem{lem}[tet]{Lemma}
+\theoremstyle{definition}
+\newtheorem{defi}{Definíció}
+\theoremstyle{remark}
+\newtheorem{fel}{Feladat}[section]
+\algblockdefx{DoWhile}{EndDoWhile}{\textbf{do}}{\textbf{while}}
+\algblockdefx{Cases}{EndCases}{\textbf{cases}}{\textbf{end cases}}
+\algnewcommand\algorithmicwhen{\textbf{when}}
+\algnewcommand\algorithmicotherwise{\textbf{otherwise}}
+\algnewcommand\algorithmicendwhen{\textbf{end when}}
+\algnewcommand\When[1]{\item[\algorithmicwhen\ #1:]}
+\algnewcommand\Otherwise{\item[\algorithmicotherwise:]}
+\begin{document}
+\listof{forraskod}{Forráskód}
+\listofalgorithms
+\begin{tet}
+Első tétel
+\end{tet}
+\begin{proof}
+Bizonyítása
+\end{proof}
+\begin{defi}
+Első definícó
+\end{defi}
+\begin{tet}
+Második tétel
+\end{tet}
+\begin{defi}
+Második definíció
+\end{defi}
+\begin{lem}
+Lemma
+\end{lem}
+\section{Feladatsor 1}
+\begin{fel}
+Első feladat
+\end{fel}
+\begin{fel}
+Második feladat
+\end{fel}
+\section{Feladatsor 2}
+\begin{fel}
+Harmadik feladat
+\end{fel}
+\begin{fel}
+Negyedik feladat
+\end{fel}
+\begin{fel}
+Ötödik feladat
+\end{fel}
+\begin{tet}
+Tétel az ötödik feladathoz
+\end{tet}
+\begin{defi}
+Definíció az ötödik feladathoz
+\end{defi}
+\begin{megj}
+Megjegyzés
+\end{megj}
+\verb|\LaTeX \LaTeX \LaTeX|
+
+\verb|\newtheorem{tet}{Tétel}|
+
+\hulipsum[1]
+\begin{forraskod}
+\caption{Forráskód}
+\label{forraskod}
+\begin{verbatim}
+\begin{itemize}
+\item Ez egy lista
+\end{itemize}
+\end{verbatim}
+\end{forraskod}
+\newpage
+\lstinputlisting[language=C, tabsize=5, numbers=left, stepnumber=4, float, label=c_kod]{main.c}
+
+\begin{algorithm}
+\caption{Gyorsrendezés}
+\label{gyorsrendezes}
+\begin{algorithmic}[2]
+\Procedure{Quicksort}{@A,a,b}
+\Require A írható tömb
+\Require 1 <= a <= b <= Hossz[A] indexek
+\Ensure a-b indextartományt rendezzük
+\If{a=b}
+\Return A
+\Else
+\Call{Feloszt}{@A,a,b,A(a),@q}
+\Call{Quicksort}{@A,a,q}
+\Call{Quicksort}{@A,q+1,b}
+\Return A
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\begin{algorithmic}
+\DoWhile
+\State i+1
+\EndDoWhile{$i < x$}
+\end{algorithmic}
+\begin{algorithmic}
+\State $x \gets$ input value
+\Cases
+\When{$x > 0$}
+\State Végrehajtandó művelet, ha $x > 0$
+\When{$x < 0$}
+\State Végrehajtandó művelet, ha $x < 0$
+\Otherwise
+\State Végrehajtandó művelet, ha egyéb esetben
+\EndCases
+\end{algorithmic}
+\end{document}
