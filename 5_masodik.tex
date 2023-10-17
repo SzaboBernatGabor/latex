@@ -1,0 +1,37 @@
+\documentclass{book}
+\usepackage{hulipsum}
+\usepackage{hyperref}
+\usepackage{imakeidx}
+\usepackage{tocbibind}
+\makeindex[columns=2,title=atnevezve]
+\usepackage[backend=biber,style=numeric]{biblatex}
+\hypersetup{backref=page}
+\begin{document}
+\title{5. Feladat}
+\author{Szabó Bernát Gábor}
+\date{2023.10.17.}
+\frontmatter
+\maketitle
+\tableofcontents
+\mainmatter
+\chapter{}
+\index{ácseptör}
+\subsection{Albejegyzés}
+\subsection{Albejegyzés2}
+\cite{bib}
+\cite{bib}
+\hulipsum[1]
+\chapter{}
+\index{\textit{chapter2}}
+\hulipsum[1]
+\chapter{}
+\index{TeX|Lásd{chapter3}}
+\cite{bib}
+\cite{bib}
+\index{people!enumerate!enumerate}
+\hulipsum[1]
+\backmatter
+\cleardoublepage
+\indexprologue{szöveg}
+\printindex
+\end{document}
