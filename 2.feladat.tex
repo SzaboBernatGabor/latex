@@ -1,36 +1,32 @@
-\documentclass[]{article}
-\usepackage[magyar]{babel}
-\usepackage{t1enc}
+\documentclass{article}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[]{xcolor}
-\usepackage[]{graphicx}
+\usepackage[magyar]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
 \begin{document}
-Heló világ
-\textbf{vastag?}
+%ezt a feladatot újra elkészítettem mert nem tetszett nekem
+helo
+\bf{félkövér}
+\it{dőlt}
+\textsl{slanted}
+\textbf{serif úr}
 
+\textit{ez dőlt \emph{kiemelt} hatások}
 
-\textit{dőlt?}
+\textbf{ez félkövér \emph{kiemelt} hatások}
 
+akkor most \large nagyobb \normalsize betűméretre váltok  de most ezt \textsc{nagybetűk}
 
-\textsf{Sans vagyok}
+\fbox{\reflectbox{nagy tükrözés}}
 
+\scalebox{2}[-1]{\reflectbox{szétnyújt!}}
 
-\textbf{\textit{tobb stilusom van}}
+\rotatebox{90}{kilencvenes}
 
+\rotatebox{270}{kicsit nagyobb mint kilencvenes}
 
-\scshape{small caps}
+\colorbox{black}{\textcolor{white}{fehéres}}
 
-\framebox[5cm]{\textcolor{red}{a}}
-\textcolor{blue}{s}
-\textcolor{yellow}{d}
-\textcolor{green}{f}
-\colorbox{purple}{doboz}
-
-\	\huge\textbf{\textcolor{pink}{\rotatebox{30}{sziaaaaaaaaaa}}}
-\tiny vásárlás után, reklamációt nem fogadunk el
-\huge
-\rotatebox {30} {\reflectbox{sziaaaaaaaaaa}}
-\colorbox{black}{\textcolor {red} {\scalebox {5} [50]{scaled}}}
-
-\colorbox{black}{\textcolor{white}{aaaaaaaaaaa}}
+\fcolorbox{red}{white}{\textcolor{red}{piros tojás húsvéti alkalomból}}
 \end{document}
